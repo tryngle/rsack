@@ -108,6 +108,7 @@ def track_to_flac(track: dict, album: dict, lyrics: str) -> dict:
         "TRACKTOTAL": str(track['track_total']),
         "DATE": _format_date(track['release_ymd']),
         "GENRE": album['genre_str'],
+        "COMMENT": str(track['/n']),
         "LABEL": '; '.join(str(label['label_nm']) for label in album['labels']),
         "LYRICS": lyrics
     }
