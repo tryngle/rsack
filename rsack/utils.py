@@ -26,21 +26,21 @@ class Settings:
         """
         # Write file
         config = ConfigParser()
-        config['Bugs'] = {'email': "email@protonmail.com",
-                          'password': "mypassword",
-                          'threads': "2",
-                          'path': "C:\Music\Korean",
-                          'timed_lyrics': "true",
-                          'contributions': "false",
+        config['Bugs'] = {"email": "email@protonmail.com",
+                          "password": "mypassword",
+                          "threads": "2",
+                          "path": "C:\Music\Korean",
+                          "timed_lyrics": "true",
+                          "contributions": "false",
                           "cover_size": "original",
                           "template": "/{artist}/{artist} - {title}"}
         
         config['Genie'] = {'username': "username",
-                           'password': "mypassword",
-                           'threads': "2",
-                           'path': "C:\Music\Korean",
-                           'timed_lyrics': "Y",
-                           'contributions': "N",
+                           "password": "mypassword",
+                           "threads": "2",
+                           "path": "C:\Music\Korean",
+                           "timed_lyrics": "Y",
+                           "contributions": "N",
                            "template": "/{artist}/{artist} - {title}"}
         
         config['KKBox'] = {"email": "email@protonmail.com",
