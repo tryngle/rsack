@@ -178,6 +178,7 @@ class Download:
             audio['TPE1'] = id3.TPE1(text=unquote(track_artist))
             audio['TPE2'] = id3.TPE2(text=unquote(self.album['ARTIST_NAME']))
             audio['TCON'] = id3.TCON(text="")
+            audio.setall("COMM", [id3.COMM(text=[u"지니뮤직"], encoding=id3.Encoding.UTF8)])
             if lyrics != None and self.settings['timed_lyrics']:
                     lyrics = [(v, int(k)) for k, v in lyrics.items()]
                     audio.setall("SYLT", [id3.SYLT(encoding=id3.Encoding.UTF8, lang='eng', format=2, type=1, text=lyrics)])
@@ -206,7 +207,7 @@ class Download:
             audio['ALBUMARTIST'] = unquote(self.album['ARTIST_NAME'])
             audio['ALBUM'] = unquote(self.album['ALBUM_NAME'])
             audio['TITLE'] = track_title
-            audio['COMMENT'] = "지니뮤직"
+            audio['COMMENT'] = ""
             if lyrics != None and self.settings['timed_lyrics']:
                 audio['LYRICS'] = format_genie_lyrics(lyrics)
             logger.debug(f"Writing tags to: {path}")
