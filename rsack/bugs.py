@@ -242,6 +242,7 @@ class Download:
                 "ALBUM": id3.TALB,
                 "ALBUMARTIST": id3.TPE2,
                 "ARTIST": id3.TPE1,
+                "COMMENT": id3.COMM,
                 "COMPOSER": id3.TCOM,
                 "COPYRIGHT": id3.TCOP,
                 "DATE": id3.TDRC,
